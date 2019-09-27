@@ -1,0 +1,143 @@
+
+body {
+
+    font-family: sans-serif;
+    letter-spacing: -.5px;
+}
+
+.main {
+    padding: 0;
+}
+
+
+button {
+    background-color: #97cc46;
+    line-height: 1.5;
+    color: #000;
+    border: 2px solid #97cc46;
+    border-radius: 2px;
+    padding: 2px 8px;
+}
+
+.top-nav{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    background-color: #fff!important;
+    border-top: 1px solid rgb(189, 183, 183);
+    border-bottom: 1px solid rgb(189, 183, 183);
+    padding:0;
+}
+
+.navbar img {
+    height: 28px;
+    width: 28px;
+    vertical-align: top;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+.top-navText {
+    font-size: 28px;
+    font-weight: 500;
+    padding:0;
+}
+
+#stickyNav {
+    justify-content: center;
+    background-color: #fff!important;
+    border-top: 1px solid rgb(189, 183, 183);
+    border-bottom: 1px solid rgb(189, 183, 183);
+    padding: 0;
+}
+
+#stickyNav a {
+    float: center;
+    display: block;
+    color: black;
+    text-align: center;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-family:sans-serif;
+    margin: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sticky {
+    position: fixed;
+    z-index: 1;
+    top: 53px;
+    width: 100%;
+  }
+
+
+.center-img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90px;
+    height: 90px;
+}
+
+.burger-add {
+    font-size: 35px!important;
+}
+
+#burger {
+    margin-top: 20px;
+    border-radius: 5%;
+    text-align: center;
+    border: 1px solid rgb(156, 151, 151);
+}
+
+#burger-submit {
+    margin-top:15px;
+    padding:8px 20px;
+    line-height: 1.5;
+    color: #000;
+    border: 2px solid #97cc46;
+    border-radius: 2px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family:sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.jumbotron {
+    margin-top: 40px;
+    background-color: #fff;
+    text-align: center;
+    align-content: center;
+}
+
+
+
+
+
+/* 
+.addl-nav{
+    margin-top: 60px;
+
+}
+
+.navbar-toggle {
+    background-color:#97cc46;
+    border: 1px solid #97cc46;
+} */
+
+.burgDiv {
+    border: none;
+    text-transform: uppercase;
+}
+
+.burgDiv img{
+    width: 200px;
+    height: 170px;
+}
+
+
+
