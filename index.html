@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -11,15 +12,14 @@
 </head>
 <body>
     
-    <div class="container">
-        <h1>Current Weather</h1>
-        <form class="form-inline">
-            <div class="form-group mb-2">
-                <label for="query" class="sr-only">Search by City</label>
-                <input type="text" class="form-control" id="query" placeholder="eg Durham">
+    <div class="container mainContainer">
+        <h1 id="mainHeader">Current Weather</h1>
+        <div class="input-group mb-3 searchInput">
+            <input type="text" class="form-control" id="query" placeholder="eg Durham" aria-label="Query">
+            <div class="input-group-append">
+              <button class="btn btn-secondary" type="button" id="searchButton">Search</button>
             </div>
-        <button type="button" class="btn btn-primary mb-2" id="searchButton">Search</button>
-        </form>
+        </div>
         <div class="currentContainer"></div>
         <div class="forecastContainer card-group"></div>
     </div>
@@ -43,7 +43,7 @@
     </script>
 
     <script id="forecast" type="text/x-handlebars-template">
-        <div class="card">
+        <div class="card weatherCard">
         <div class="card-body">
             <p class="card-text condition">{{ conditions }}</p>
             <h4 class="temp">{{ temp }} F</h4>
