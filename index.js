@@ -58,8 +58,10 @@ getForecast = function(query) {
                 // get one result per day out of the 8 choices (chose arbitrary timestamp of 12:00:00)
                 if (item.dt_txt.split(" ")[1] === "12:00:00") {
                     const forecastObj = {
+                        day: moment(item.dt_txt).format('dddd'),
                         temp: convertKelToFar(item.main.temp_max), // convert max temp to F
-                        conditions: item.weather[0].main // get main condition for each day
+                        conditions: item.weather[0].main, // get main condition for each day
+                        icon: `http://openweathermap.org/img/w/${item.weather[0].icon}.png`
                     };
                     forecast.push(forecastObj);
                 }

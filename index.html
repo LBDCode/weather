@@ -10,6 +10,7 @@
     <title>Weather</title>
 </head>
 <body>
+    
     <div class="container">
         <h1>Current Weather</h1>
         <form class="form-inline">
@@ -36,10 +37,8 @@
     <script id="current" type="text/x-handlebars-template">
         <div>
             <h2 class="temp">{{ temp }} F</h2>
-            <p class="card-text searchQuery">{{ search }}</p>
-            <h4 class="condition">{{ conditions }} </h4>
-            <!-- <p class="icon"><img src='{{ iconURL }}' alt='Weather Icon'></p>
-            <h5 class="card-text">{{ day }}</h5> -->
+            <h4 class="card-text searchQuery">{{ search }}</h4>
+            <h5 class="condition">{{ conditions }} </h5>
         </div>
     </script>
 
@@ -48,8 +47,8 @@
         <div class="card-body">
             <p class="card-text condition">{{ conditions }}</p>
             <h4 class="temp">{{ temp }} F</h4>
-            <!-- <p class="icon"><img src='{{ iconURL }}' alt='Weather Icon'></p>
-            <h5 class="card-text">{{ day }}</h5> -->
+            <p class="icon"><img src='{{ icon }}' alt='Weather Icon'></p>
+            <h5 class="card-text">{{ day }}</h5>
         </div>
         </div>
     </script>
