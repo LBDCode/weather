@@ -11,14 +11,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>Weather</h1>
+        <h1>Current Weather</h1>
         <form class="form-inline">
             <div class="form-group mb-2">
-                <label for="query" class="sr-only">Search</label>
-                <input type="text" class="form-control" id="query" placeholder="eg 27612 or Raleigh, NC">
+                <label for="query" class="sr-only">Search by City</label>
+                <input type="text" class="form-control" id="query" placeholder="eg Durham">
             </div>
         <button type="button" class="btn btn-primary mb-2" id="searchButton">Search</button>
         </form>
+        <div class="currentContainer"></div>
+        <div class="forecastContainer card-group"></div>
     </div>
 
     <script
@@ -27,7 +29,30 @@
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script src="index.js"></script>
+
+    <script id="current" type="text/x-handlebars-template">
+        <div>
+            <h2 class="temp">{{ temp }} F</h2>
+            <p class="card-text searchQuery">{{ search }}</p>
+            <h4 class="condition">{{ conditions }} </h4>
+            <!-- <p class="icon"><img src='{{ iconURL }}' alt='Weather Icon'></p>
+            <h5 class="card-text">{{ day }}</h5> -->
+        </div>
+    </script>
+
+    <script id="forecast" type="text/x-handlebars-template">
+        <div class="card">
+        <div class="card-body">
+            <p class="card-text condition">{{ conditions }}</p>
+            <h4 class="temp">{{ temp }} F</h4>
+            <!-- <p class="icon"><img src='{{ iconURL }}' alt='Weather Icon'></p>
+            <h5 class="card-text">{{ day }}</h5> -->
+        </div>
+        </div>
+    </script>
 
 </body>
 </html>
