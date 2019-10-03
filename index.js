@@ -61,7 +61,7 @@ getForecast = function(query) {
                         day: moment(item.dt_txt).format('dddd'),
                         temp: convertKelToFar(item.main.temp_max), // convert max temp to F
                         conditions: item.weather[0].main, // get main condition for each day
-                        icon: `http://openweathermap.org/img/w/${item.weather[0].icon}.png`
+                        icon: `http://openweathermap.org/img/w/${item.weather[0].icon}.png` // get icon url
                     };
                     forecast.push(forecastObj);
                 }
@@ -71,17 +71,16 @@ getForecast = function(query) {
     }).then(() => renderForecast(forecast));
 };
 
-
+// render current conditions into current container w/ handlebars
 const renderCurrentWeather = function(cur){
-    console.log(cur);
     const $currentDiv = $('.currentContainer').empty();
     const template = Handlebars.compile($('#current').html());
     
     $currentDiv.append(template(cur[0]));
 };
 
+// render forecast into current container w/ handlebars
 const renderForecast = function(fCast){
-    console.log(fCast["0"]);
     const $forecastDiv = $('.forecastContainer').empty();
     const template = Handlebars.compile($('#forecast').html());
 
@@ -101,7 +100,7 @@ $("#searchButton").click(function() {
         getForecast($query);
         getCurrent($query);
     } else {
-        console.log("invalid");
+        console.log("invalid"); //yeah, this sucks - add a message div to actually handle/communicate errors
     }
     resetQueryField();
 });
